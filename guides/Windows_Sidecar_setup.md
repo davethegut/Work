@@ -34,9 +34,9 @@
 
 ## Creating API-Token
 - Go into systems/sidecars, and click on "Create or reuse a token for the graylog-sidecar user" 
-![api_token1](https://github.com/davethegut/Work/blob/90cfa7736cf9d509e2591f468ae8356b98fe4046/pictures/api-token1.1.png)
+![api_token1](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Api-Token1.2.png)
 - Enter your choice name into the "token name" slot and click "create token."
-![api_token2](https://github.com/davethegut/Work/blob/f6889fbe64fbf3da137f88d07cc0093893eabfeb/pictures/api-token2.png)
+![api_token2](https://github.com/davethegut/Work/blob/b0a4848f8b716f2555c34b0717701afe7c0789e0/pictures/api-token2.png)
 - __ATTENTION: This will be the only time you can copy your "api token," so I suggest that you paste it somewhere safe, just in case you need to use this token again__
 
 ## Configuring Sidecar Service in Windows
@@ -48,9 +48,9 @@
 ##### Now that our service is fully installed and configured in our Windows machine, let's switch back to our Graylog instance to setup the configuraton there.
 
 ## Configuring our Winlogbeat Collector
-- Go to systems/Sidecar within graylog instance and select the configuration tab in the left hand corner, and click "create new configuration" tab.
+- Go to systems/Sidecar within your Graylog instance and select the configuration tab in the left hand corner, then click the "create new configuration" tab.
 - We are focusing on Winlogbeat with windows, so select that collector within the drop-down.
-    ![sidecar_configuration](https://github.com/davethegut/Work/blob/90cfa7736cf9d509e2591f468ae8356b98fe4046/pictures/Winlogbeat_config.png)
+    ![sidecar_configuration](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/selecting_winlogbeat_collector.png)
 - This will be the configuration that Graylog pre-builds for you: 
 ```
 # Needed for Graylog
@@ -70,9 +70,10 @@ winlogbeat:
    - name: System
    - name: Security
 ```
-- Then give this configuration a name, and even a color if you want, and click "create"
+- Then give this configuration a name, and even a color if you want, then click "create"
+![Winlogbeat_config](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Winlogbeat_config.png)
 - Once created, we should see our new configuration in our graylog instance
-![graylog_config_page](https://github.com/davethegut/Work/blob/90cfa7736cf9d509e2591f468ae8356b98fe4046/pictures/Windows_sidecar_configurations_main_page.png)
+![graylog_config_page](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Windows_sidecar_configurations_main_page.png)
 ##### Now that the configuration is ready to go, let's go ahead and install and start our service in our windows machine. 
 
 ## Installing and Starting Service
@@ -85,13 +86,13 @@ winlogbeat:
 
 ## Final Step
 - Under systems/sidecar, then under the administration tab, you should see your windows device detected.
-![adminstration_page_sidecar](https://github.com/davethegut/Work/blob/4271fd108a7d45c6eaa8c51eae9ea53e4f2a1700/pictures/Windows-Sidecar-Administration-page.png)
+![adminstration_page_sidecar](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Windows-Sidecar-Administration-page.png)
 - Select the "winlogbeat" collector underneath our windows-Sidecar machine, and on the drop down on the left-hand side select the "windows_sidecar" configuration that we set up earlier. 
-![choosing_config_for_sidecar](https://github.com/davethegut/Work/blob/3b39678c460ae73355d8ce36afd4fbd1f3331eb2/pictures/choosing_sidecar_config.png)
+![choosing_config_for_sidecar](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/choosing_sidecar_config.png)
 - Once your configuration choice is selected, click the "process" drop down on the right-hand side and select "start," and as soon as you do that your Graylog instance should now be succesfully collecting logs from your Windows machine. 
 
 ### Testing
 - To ensure that our graylog instance is collecting our windows logs, go to the overview tab underneath Sidecar, and select "show messages" button on the right-hand side, and it should now show the logs that are coming from our Windows Machine. 
-![sidecar_test_pic_1](https://github.com/davethegut/Work/blob/3b39678c460ae73355d8ce36afd4fbd1f3331eb2/pictures/Sidecar_test1.png)
+![sidecar_test_pic_1](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Sidecar_test1.png)
 - Here is a more detailed example of what your search page should look like when you view your incoming logs from your Sidecar. 
 ![sidecar_test_pic_2](https://github.com/davethegut/Work/blob/3b39678c460ae73355d8ce36afd4fbd1f3331eb2/pictures/Sidecar_test2.png) 
