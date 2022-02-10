@@ -58,7 +58,7 @@ fields_under_root: true
 fields.collector_node_id: ${sidecar.nodeName}
 fields.gl2_source_collector: ${sidecar.nodeId}
 output.logstash:
-   hosts: ["<your_graylog_ip>"]
+   hosts: ["<your_graylog_ip>:5044"]
 path:
   data: C:\Program Files\Graylog\sidecar\cache\winlogbeat\data
   logs: C:\Program Files\Graylog\sidecar\logs
