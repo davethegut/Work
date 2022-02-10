@@ -48,7 +48,7 @@
 ##### Now that our service is fully installed and configured in our Windows machine, let's switch back to our Graylog instance to setup the configuraton there.
 
 ## Configuring our Winlogbeat Collector
-- Go to Systems/Sidecar within your Graylog instance and select the configuration tab in the left hand corner, then click the "create new configuration" tab.
+- Go to Systems/Sidecar within your Graylog instance and select the configuration tab in the left hand corner, then click the "Create Configuration" tab.
 - We are focusing on Winlogbeat with Windows, so select that collector within the drop-down.
     ![sidecar_configuration](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/selecting_winlogbeat_collector.png)
 - This will be the configuration that Graylog pre-builds for you: 
@@ -70,14 +70,14 @@ winlogbeat:
    - name: System
    - name: Security
 ```
-- Then give this configuration a name, and even a color if you want, then click "create"
+- Then give this configuration a name, and even a color if you want, then click "Create"
 ![Winlogbeat_config](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Winlogbeat_config.png)
 - Once created, we should see our new configuration in our Graylog instance
 ![graylog_config_page](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Windows_sidecar_configurations_main_page.png)
 ##### Now that the configuration is ready to go, let's go ahead and install and start our service in our windows machine. 
 
 ## Installing and Starting Service
-- Open a command prompt window using Admin 
+- Open a command prompt window using administrator rights 
    - Run the following commands: 
         - `& "C:\Program Files\graylog\sidecar\graylog-sidecar.exe" -service install `
         - `& "C:\Program Files\graylog\sidecar\graylog-sidecar.exe" -service start `
@@ -87,15 +87,15 @@ winlogbeat:
 ## Final Step
 - Under System/Sidecar, then under the administration tab, you should see your windows device detected.
 ![adminstration_page_sidecar](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Windows-Sidecar-Administration-page.png)
-- Select the "winlogbeat" collector underneath our Windows Sidecar machine on the left-side, and on the "configure" drop down on the right-hand side select the "Windows_Sidecar" configuration that we set up earlier. 
+- Select the "winlogbeat" collector underneath our Windows Sidecar machine on the left-side, and on the "Configure" drop down on the right-hand side select the "windows_sidecar" configuration that we set up earlier. 
 ![choosing_config_for_sidecar](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/choosing_sidecar_config.png)
-- Once your configuration choice is selected, click the "process" drop down on the right-hand side and select "start,"
+- Once your configuration choice is selected, click the "process" drop down on the right-hand side and select "Start,"
 ![starting_your_sidecar](https://github.com/davethegut/Work/blob/6668f9450a5d6d2de3aafe99457b7208e432b987/pictures/starting_our_sidecar.png)
 -   Now, as soon as you do that your Graylog instance should now be succesfully started and collecting logs from your Windows machine. 
 ![service_is_started](https://github.com/davethegut/Work/blob/6668f9450a5d6d2de3aafe99457b7208e432b987/pictures/service_is_started.png)
 
 ### Testing
-- To ensure that our Graylog instance is collecting our windows logs, go to the overview tab underneath Sidecar, and select "show messages" button on the right-hand side, and it should now show the logs that are coming from our Windows Machine. 
+- To ensure that our Graylog instance is collecting our windows logs, go to the overview tab underneath Sidecar, and select "Show messages" button on the right-hand side, and it should now show the logs that are coming from our Windows Machine. 
 ![sidecar_test_pic_1](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Sidecar_test1.png)
 - Here is a more detailed example of what your search page should look like when you view your incoming logs from your Sidecar. 
 ![sidecar_test_pic_2](https://github.com/davethegut/Work/blob/3b39678c460ae73355d8ce36afd4fbd1f3331eb2/pictures/Sidecar_test2.png) 
