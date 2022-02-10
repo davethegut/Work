@@ -23,7 +23,7 @@
 
 ## Setting up Graylog 
 - Before getting started, let's set up our beats input in Graylog to help speed up the install process.  
-- In Graylog, go to systems/input and select "Beats" in the bar on the left hand side, then click "launch new input.
+- In Graylog, go to systems/input and select "Beats" in the bar on the left hand side, then click "Launch new input.
 - ![Beats Input](https://github.com/davethegut/Work/blob/b5cc7c33ca1be9b87964c42464d2a9af27622959/pictures/Launch_beats_input.png). 
 - After launching a new input, select "Global" and ensure that your input is set to port "5044" which is where we will be sending our Windows Sidecar logs to. 
 ##### Now that we have setup our input, let's go ahead and install the Sidecar service on our Windows machine.
