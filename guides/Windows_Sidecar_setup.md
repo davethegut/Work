@@ -10,7 +10,7 @@
 
 ## Notes before getting started
 
-- When choosing what version of Sidecar to install, you must choose the version based off the Graylog version you are currently using. You can find the windows sidecar install link [here](https://github.com/Graylog2/collector-sidecar/releases/).
+- When choosing what version of Sidecar to install, you must choose the version based off the Graylog version you are currently using. You can find the windows Sidecar install link [here](https://github.com/Graylog2/collector-sidecar/releases/).
 
 | Sidecar version  | Graylog Version |
 | ------------- |:-------------:|
@@ -18,38 +18,38 @@
 | 1.0.x      | 3.0 or higher     |
 
 ### Notes for getting started
-- Ensure that the Graylog sidecar service is successfully installed inside your Windows OS.
+- Ensure that the Graylog Sidecar service is successfully installed inside your Windows OS.
 - Have your Graylog instance up and running alongside your Windows OS, as we will be switching back and forth between the Windows machine and Graylog instance.
 
 ## Setting up Graylog 
 - Before getting started, let's set up our beats input in Graylog to help speed up the install process.  
 - In Graylog, go to systems/input and select "Beats" in the bar on the left hand side, then click "launch new input.
 - ![Beats Input](https://github.com/davethegut/Work/blob/b5cc7c33ca1be9b87964c42464d2a9af27622959/pictures/Launch_beats_input.png). 
-- After launching a new input, select "Global" and ensure that your input is set to port "5044" which is where we will be sending our windows sidecar logs to. 
-##### Now that we have setup our input, let's go ahead and install the sidecar service on our Windows machine.
+- After launching a new input, select "Global" and ensure that your input is set to port "5044" which is where we will be sending our Windows Sidecar logs to. 
+##### Now that we have setup our input, let's go ahead and install the Sidecar service on our Windows machine.
 
 ## Installation
-- Select which version of sidecar to download to your Windows machine based off of your Graylog version.
-##### Now that sidecar is succesfully installed on our machine, let's switch back to Graylog and configure our windows sidecar configuration. 
+- Select which version of Sidecar to download to your Windows machine based off of your Graylog version.
+##### Now that Sidecar is succesfully installed on our machine, let's switch back to Graylog and configure our Windows Sidecar configuration. 
 
 ## Creating API-Token
-- Go into systems/sidecars, and click on "Create or reuse a token for the Graylog-sidecar user" 
+- Go into systems/sidecars, and click on "Create or reuse a token for the graylog-sidecar user" 
 ![api_token1](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Api-Token1.2.png)
-- Enter your choice name into the "token name" slot and click "create token."
+- Enter your choice name into the "Token Name" slot and click "Create Token."
 ![api_token2](https://github.com/davethegut/Work/blob/b0a4848f8b716f2555c34b0717701afe7c0789e0/pictures/api-token2.png)
-- __ATTENTION: This will be the only time you can copy your "api token," so I suggest that you paste it somewhere safe, just in case you need to use this token again__
+- __ATTENTION: This will be the only time you can copy your "server API token," so I suggest that you paste it somewhere safe, just in case you need to use this token again__
 
 ## Configuring Sidecar Service in Windows
 - Now that we have our API token, it's time to run the Windows Sidecar installer.
 ![Windows_sidecar_installer](https://github.com/davethegut/Work/blob/f6889fbe64fbf3da137f88d07cc0093893eabfeb/pictures/Windows-sidecar-installer.png)
-- As seen above, enter in the URL to your Graylog api, it should be pre configured as (http://127.0.0.1:9000/api)
-- Then name your sidecar instance and enter your API-token that we created earlier. 
+- As seen above, enter in the URL to your Graylog API, it should be pre configured as (http://127.0.0.1:9000/api)
+- Then name your Sidecar instance and enter your server API token that we created earlier. 
 - Once finished, you can change or configure your sidecar.yml file, which should be located in `C:\Program Files\Graylog\sidecar\sidecar.yml`
 ##### Now that our service is fully installed and configured in our Windows machine, let's switch back to our Graylog instance to setup the configuraton there.
 
 ## Configuring our Winlogbeat Collector
-- Go to systems/Sidecar within your Graylog instance and select the configuration tab in the left hand corner, then click the "create new configuration" tab.
-- We are focusing on Winlogbeat with windows, so select that collector within the drop-down.
+- Go to Systems/Sidecar within your Graylog instance and select the configuration tab in the left hand corner, then click the "create new configuration" tab.
+- We are focusing on Winlogbeat with Windows, so select that collector within the drop-down.
     ![sidecar_configuration](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/selecting_winlogbeat_collector.png)
 - This will be the configuration that Graylog pre-builds for you: 
 ```
@@ -72,7 +72,7 @@ winlogbeat:
 ```
 - Then give this configuration a name, and even a color if you want, then click "create"
 ![Winlogbeat_config](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Winlogbeat_config.png)
-- Once created, we should see our new configuration in our graylog instance
+- Once created, we should see our new configuration in our Graylog instance
 ![graylog_config_page](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Windows_sidecar_configurations_main_page.png)
 ##### Now that the configuration is ready to go, let's go ahead and install and start our service in our windows machine. 
 
@@ -82,12 +82,12 @@ winlogbeat:
         - `& "C:\Program Files\graylog\sidecar\graylog-sidecar.exe" -service install `
         - `& "C:\Program Files\graylog\sidecar\graylog-sidecar.exe" -service start `
 - Now, the sidecar service is succesfully started on your windows machine! 
-##### Let's switch back to our Graylog instance and connect our windows sidecar to the configuration we made earlier.
+##### Let's switch back to our Graylog instance and connect our Windows Sidecar to the configuration we made earlier.
 
 ## Final Step
-- Under systems/sidecar, then under the administration tab, you should see your windows device detected.
+- Under System/Sidecar, then under the administration tab, you should see your windows device detected.
 ![adminstration_page_sidecar](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Windows-Sidecar-Administration-page.png)
-- Select the "winlogbeat" collector underneath our windows-Sidecar machine on the left-side, and on the "configure" drop down on the right-hand side select the "windows_sidecar" configuration that we set up earlier. 
+- Select the "winlogbeat" collector underneath our Windows Sidecar machine on the left-side, and on the "configure" drop down on the right-hand side select the "Windows_Sidecar" configuration that we set up earlier. 
 ![choosing_config_for_sidecar](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/choosing_sidecar_config.png)
 - Once your configuration choice is selected, click the "process" drop down on the right-hand side and select "start,"
 ![starting_your_sidecar](https://github.com/davethegut/Work/blob/6668f9450a5d6d2de3aafe99457b7208e432b987/pictures/starting_our_sidecar.png)
