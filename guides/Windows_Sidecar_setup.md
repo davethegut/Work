@@ -48,7 +48,7 @@
 ##### Now that our service is fully installed and configured in our Windows machine, let's switch back to our Graylog instance to setup the configuraton there.
 
 ## Configuring our Winlogbeat Collector
-- Go to systems/Sidecar within graylog instance and select the configuration tab in the left hand corner, and click "create new configuration" tab.
+- Go to systems/Sidecar within your Graylog instance and select the configuration tab in the left hand corner, then click the "create new configuration" tab.
 - We are focusing on Winlogbeat with windows, so select that collector within the drop-down.
     ![sidecar_configuration](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/selecting_winlogbeat_collector.png)
 - This will be the configuration that Graylog pre-builds for you: 
