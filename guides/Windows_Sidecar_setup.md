@@ -41,7 +41,7 @@
 
 ## Configuring Sidecar Service in Windows
 - Now that we have our API token, it's time to run the Windows Sidecar installer.
-    - ![Windows_sidecar_installer](https://github.com/davethegut/Work/blob/f6889fbe64fbf3da137f88d07cc0093893eabfeb/pictures/Windows-sidecar-installer.png)
+![Windows_sidecar_installer](https://github.com/davethegut/Work/blob/f6889fbe64fbf3da137f88d07cc0093893eabfeb/pictures/Windows-sidecar-installer.png)
 - As seen above, enter in the URL to your graylog api, it should be pre configured as (http://127.0.0.1:9000/api)
 - Then name your sidecar instance and enter your API-token that we created earlier. 
 - Once finished, you can change or configure your sidecar.yml file, which should be located in `C:\Program Files\Graylog\sidecar\sidecar.yml`
