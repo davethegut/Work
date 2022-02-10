@@ -70,7 +70,7 @@ winlogbeat:
    - name: System
    - name: Security
 ```
-- Then give this configuration a name, and even a color if you want, and click "create"
+- Then give this configuration a name, and even a color if you want, then click "create"
 ![Winlogbeat_config](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Winlogbeat_config.png)
 - Once created, we should see our new configuration in our graylog instance
 ![graylog_config_page](https://github.com/davethegut/Work/blob/68bde38211fb26a7762c100074c19e6c7b7c5a80/pictures/Windows_sidecar_configurations_main_page.png)
