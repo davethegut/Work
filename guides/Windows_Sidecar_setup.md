@@ -93,4 +93,5 @@ winlogbeat:
 ### Testing
 - To ensure that our graylog instance is collecting our windows logs, go to the overview tab underneath Sidecar, and select "show messages" button on the right-hand side, and it should now show the logs that are coming from our Windows Machine. 
 ![sidecar_test_pic_1](https://github.com/davethegut/Work/blob/3b39678c460ae73355d8ce36afd4fbd1f3331eb2/pictures/Sidecar_test1.png)
+- Here is a more detailed example of what your search page should look like when you view your incoming logs from your Sidecar. 
 ![sidecar_test_pic_2](https://github.com/davethegut/Work/blob/3b39678c460ae73355d8ce36afd4fbd1f3331eb2/pictures/Sidecar_test2.png) 
