@@ -3,7 +3,7 @@
 # Setting up Windows Sidecar in Graylog
 
 ## Intro
-- "Graylog Sidecar is a lightweight configuration management system for different log collectors, also called Backends." We wanted to create a short step-by-step breakdown of how to get the Windows Sidecar service installed and running on your choice Windows Machine, and have it to be able to successfully send logs to your Graylog instance via the Graylog Sidecar. 
+"Graylog Sidecar is a lightweight configuration management system for different log collectors, also called Backends." We wanted to create a short step-by-step breakdown of how to get the Windows Sidecar service installed and running on your choice Windows Machine, and have it to be able to successfully send logs to your Graylog instance via the Graylog Sidecar. 
 
 ## Pre-reqs
 - Graylog 3.0 or newer
