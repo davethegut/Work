@@ -30,7 +30,7 @@
 
 ## Installation
 - Select which version of Sidecar to download to your Windows machine based off of your Graylog version.
-##### Now that Sidecar is succesfully installed on our machine, let's switch back to Graylog and configure our Windows Sidecar configuration. 
+##### Let's switch back to Graylog and configure our Windows Sidecar configuration. 
 
 ## Creating API-Token
 - Go into systems/sidecars, and click on "Create or reuse a token for the graylog-sidecar user" 
